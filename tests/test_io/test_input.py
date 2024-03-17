@@ -10,6 +10,9 @@ class TestInputFunctions(unittest.TestCase):
     def test_read_from_file_empty(self):
         file_content = read_from_file("../../test_data/empty.txt")
         self.assertEqual(file_content, "")
+    def test_read_from_file_nonexistent(self):
+        file_content = read_from_file("test_data/nonexistent_file.txt")
+        self.assertEqual(file_content, 'File not found.')
 
 
     def test_read_from_file_pandas(self):

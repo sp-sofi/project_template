@@ -10,7 +10,7 @@ def main():
 
     #reading from file using bult in functions
     print("\nreading using python functions from data.csv:")
-    file_content = read_from_file("data_to_read.csv")
+    file_content = read_from_file("data.csv")
     output_text(file_content)
     print("data written to output_python.py\n")
 

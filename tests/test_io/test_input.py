@@ -23,6 +23,9 @@ class TestInputFunctions(unittest.TestCase):
         dataframe = read_from_file_pandas("../../data.csv")
         self.assertEqual(dataframe.shape, (2, 1))
 
+    def test_read_from_file_pandas_nonexistent_file(self):
+        dataframe = read_from_file_pandas("data.csv")
+        self.assertEqual(str(dataframe), 'File not found.')
 
 
 if __name__ == '__main__':

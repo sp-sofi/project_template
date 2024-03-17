@@ -18,7 +18,11 @@ class TestInputFunctions(unittest.TestCase):
     def test_read_from_file_pandas(self):
         dataframe = read_from_file_pandas("../../data.csv")
         self.assertTrue(dataframe is not None)
+
+    def test_read_from_file_pandas_size(self):
+        dataframe = read_from_file_pandas("../../data.csv")
         self.assertEqual(dataframe.shape, (2, 1))
+
 
 
 if __name__ == '__main__':
